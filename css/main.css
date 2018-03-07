@@ -1,0 +1,65 @@
+.ui-btn-b{
+    color: #777e77;
+    background-color: #bbbbbb;
+    border: 2px #777e77 solid; 
+}
+.ui-content{
+    padding: 0.8em;
+}
+#iconWeather{
+    text-align: center; 
+}
+#weather_icon{
+    font-size: 10em;
+    color: #777e77;
+}
+
+.center{
+    text-align: center;
+}
+
+.footer i {
+    font-size: 1.5em;
+}
+.footer p {
+    font-size: 0.8em;
+}
+.week-temperature{
+    padding: 1em 0;
+}
+.weather-icon{
+    padding: 0.4em 0;
+    font-size: 3em;
+    color: #777e77;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.loader:after  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.loader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    margin-left: -30px;
+    margin-top: -40px;
+    z-index: 1;
+}

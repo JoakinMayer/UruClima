@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UruClima</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--ARCHIVOS CSS-->
+        <link href="css/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/uruclima.css" rel="stylesheet" type="text/css"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+
+        <!--ARCHIVOS WEATHER ICONS-->
+        <link href="css/weather-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/weather-icons-wind.min.css" rel="stylesheet" type="text/css"/>
+
+        <!--ARCHIVOS JS-->
+        <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <script src="cordova.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+
+        <!--FUENTE-->
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+
+    </head>
+    <body>
+        <!--PAGINA DE CARGA-->
+        <div id="page_loader" class="loader"><img src="img/rings.svg"></div>
+
+        <!--PAGINA DE INICIO-->
+        <div id="page_intro" data-role="page" data-title="URUCLIMA" data-theme="a">
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><a href="#page_intro" class="ui-btn ui-btn-a ui-corner-all">Hoy</a></div>
+                    <div class="ui-block-b"><a href="#page_weeks" class="ui-btn ui-btn-b ui-corner-all">Semana</a></div>
+                </div>
+                <div id="iconWeather">
+                    <i id="weather_icon" class="wi wi-na weather-icon"></i>
+                </div>
+                <p class="center" id="weather_description">N/A</p>
+                <h2 class="center" id="weather_temp">N/A</h2>
+                <p class="center">Ciudad Actual: <span id="weather_city">N/A</span></p>
+                <form>
+                    <div class="ui-field-contain">
+                        <select name="select-native-1" id="select_city">
+                            <option disabled selected="">Escoge una ciudad</option>
+                            <option value="Artigas">Artigas, Artigas</option>
+                            <option value="Canelones">Canelones, Canelones</option>
+                            <option value="Melo">Melo, Cerro Largo</option>
+                            <option value="Colonia del Sacramento">Colonia del Sacramento, Colonia</option>
+                            <option value="Durazno">Durazno, Durazno</option>
+                            <option value="Trinidad">Trinidad, Flores</option>
+                            <option value="Florida">Florida, Florida</option>
+                            <option value="Minas">Minas, Lavalleja</option>
+                            <option value="Maldonado">Maldonado, Maldonado</option>
+                            <option value="Montevideo">Montevideo, Montevideo</option>
+                            <option value="Paysandú">Paysandú, Paysandú</option>
+                            <option value="Rivera">River, Rivera</option>
+                            <option value="Rocha">Rocha, Rocha</option>
+                            <option value="Salto">Salto, Salto</option>
+                            <option value="San José">San José, San José</option>
+                            <option value="Soriano">Soriano, Soriano</option>
+                            <option value="Tacuarembó">Tacuarembó, Tacuarembó</option>
+                            <option value="Treinta y Tres">Treinta y Tres, Treinta y Tres</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div data-role="footer" class="footer">
+                <div class="ui-grid-c footer-top center">
+                    <div class="ui-block-a">   
+                        <p>Max</p>
+                        <i class="wi wi-direction-up"></i>
+                        <p id="weather_temp_max_actual"><i class="wi wi-na"></i></p>
+                    </div>
+                    <div class="ui-block-b">   
+                        <p>Min</p>
+                        <i class="wi wi-direction-down"></i>
+                        <p id="weather_temp_min_actual"><i class="wi wi-na"></i></p>
+                    </div>
+                    <div class="ui-block-c">   
+                        <p>Humedad</p>
+                        <i class="wi wi-barometer"></i>
+                        <p id="weather_humidity_actual"><i class="wi wi-na"></i></p>
+                    </div>
+                    <div class="ui-block-d">   
+                        <p>Nubes</p>
+                        <i class="wi wi-cloudy"></i>
+                        <p id="weather_clouds_actual"><i class="wi wi-na"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_weeks" data-role="page">
+            <div data-role="content" class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><a href="#page_intro" class="ui-btn ui-btn-b ui-corner-all">Hoy</a></div>
+                    <div class="ui-block-b"><a href="#page_weeks" class="ui-btn ui-btn-a ui-corner-all">Semana</a></div>
+                </div>
+                <div id="weather_week">
+                    <div class="ui-grid-b list-week">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
